@@ -1,0 +1,897 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@400;500;600;700&display=swap')
+
+// Color var
+
+$bold-text: #18063c
+$header-nav-text: #1c0e0d
+$orange-text-button: #ff553e
+$regular-text: #404040
+
+$--fs-64: 4rem
+$--fs-48: 3rem
+$--fs-24: 1.5rem
+$--fs-20: 1.25rem
+$--fs-18: 1.125rem
+// Fonts
+$poppins-font: 'Poppins', sans-serif
+$inter-font: 'Inter', sans-serif
+
+@mixin  regularFont()
+	font-family: $inter-font
+	font-size: $--fs-18
+	font-weight: 400
+	color: $regular-text
+	line-height: 36px
+
+@mixin boldFont()
+	font-family: $poppins-font
+	color: $bold-text
+	font-weight: 600
+	font-size: $--fs-48
+
+body
+	overflow-x: hidden
+
+// ----------------------------------- //
+			// Header
+//------------------------------------ //
+
+.header
+	display: none
+	background-color: #FFF8F2
+
+	&__top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-top: 1em
+
+	&__col
+		font-family: $poppins-font
+		font-size: 18px
+		font-weight: 400
+
+	&__nav
+		display: flex
+		gap: 48px
+
+	&__auth
+		background-color: $orange-text-button
+		padding: 16px 32px
+		color: #fff
+		border-radius: 34px
+		font-weight: 500
+
+	&__auth--link
+		padding-right: 36px
+		color: $orange-text-button
+		background: transparent
+
+// ----------------------------------- //
+			// Top Block
+//------------------------------------ //
+
+.top-block
+	background-color: #FFF8F2
+	height: 80vh
+
+	&__button-wrap
+		display: flex
+		justify-content: center
+		padding-top: 68px
+
+	&__button
+		font-family: $poppins-font
+		padding: 24px 40px
+		background: $orange-text-button
+		border-radius: 40px
+		color: white
+
+	&__text-wrap
+		width: 800px
+		height: 500px
+		margin-right: auto
+		margin-left: auto
+		padding-top: 230px
+		display: flex
+		justify-content: center
+		flex-direction: column
+		gap: 24px
+
+		&::before
+			content: ""
+			width: 150px
+			height: 170px
+			top: 10em
+			left: 20em
+			background: url('../assets/top-block/watch.png')
+			background-size: cover no-repeat
+			transform: rotate(-5deg)
+			position: absolute
+			z-index: 1
+
+		&::after
+			content: ""
+			width: 178px
+			height: 191px
+			left: 80em
+			bottom: 10em
+			background: url('../assets/top-block/CLIPBOARD.png')
+			background-size: cover no-repeat
+			position: absolute
+			z-index: 1
+
+		&__bold
+			font-family: $poppins-font
+			color: #1C0E0D
+			font-size: 4em
+			line-height: 90px
+			font-weight: 700
+			text-align: center
+			position: relative
+			z-index: 2
+
+		&__regular
+			@include regularFont
+			text-align: center
+
+		&__orange-line
+			position: absolute
+			z-index: 0
+			top: 435px
+			padding-left: 20px
+
+// ----------------------------------- //
+			// Funfact
+//------------------------------------ //
+
+.fun-fact
+	&-wrap
+		display: flex
+		flex-wrap: wrap
+		gap: 202px
+
+	&__trapezoid
+		z-index: 2
+		position: absolute
+		height: 100vh
+
+	&__item
+		display: flex
+		flex-direction: column
+		justify-content: center
+		position: relative
+		z-index: 3
+		padding-top: 2em
+
+		&__bold-text
+			font-family: $poppins-font
+			font-weight: 600
+			font-size: 3em
+			text-align: center
+			line-height: 2em
+
+		&__regular-text
+			font-family: $inter-font
+			font-weight: 400
+			font-size: 1.125em
+			color: $regular-text
+			text-align: center
+
+// ----------------------------------- //
+			// Features
+//------------------------------------ //
+
+.features
+	z-index: 3
+	position: relative
+
+	&__bold-text
+		position: relative
+		z-index: 5
+		padding-top: 5em
+		text-align: center
+		font-family: $poppins-font
+		font-weight: 600
+		font-size: 3em
+		color: $bold-text
+
+	&__regular-text
+		padding-top: 1.25em
+		text-align: center
+		font-family: $inter-font
+		font-weight: 400
+		font-size: 1.125em
+		color: $regular-text
+
+	&__3d-rocket
+		z-index: 4
+		position: absolute
+		left: 83%
+		top: 32%
+		right: 18%
+
+	&__orange-line
+		z-index: 4
+		position: absolute
+		left: 49.5%
+		top: 36%
+
+	&__cards
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		padding-top: 6em
+
+	&__card-item
+		padding-top: 1.25em
+
+// ----------------------------------- //
+			// Analytics
+//------------------------------------ //
+
+.analytics
+	display: flex
+	flex-wrap: wrap
+	margin-top: 5em
+	gap: 25px
+
+	&__items-wrap
+		display: flex
+		flex-direction: column
+
+	&__item
+		padding-top: 48px
+		display: flex
+		gap: 24px
+
+		&__bold
+			@include boldFont
+			font-size: 1.75em
+			line-height: 36px
+
+		&__regular
+			@include regularFont
+			line-height: 36px
+
+		&__img
+			padding-top: 10px
+	&__text
+		display: flex
+		flex-direction: column
+		padding-right: 24px
+		&__main-bold
+			@include boldFont
+			padding-top: 3em
+			line-height: 68px
+
+		&__main-regular
+			padding-top: 1.25em
+			line-height: 36px
+			@include regularFont
+
+// ----------------------------------- //
+			// Tracker
+//------------------------------------ //
+.tracker
+	margin-top: 10em
+	margin-bottom: 10em
+	padding-left: 200px
+
+	&-h1
+		max-width: 710px
+
+	&__list-img
+		position: absolute
+		left: 0
+		padding-top: 210px
+
+	&__first-img
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+
+	&__second-img
+		padding-top: 80px
+
+	&__img1
+		height: 340px
+		width: 337px
+
+	&__img2
+		width: 280px
+		height: 381px
+
+	&__img3
+		width: 388px
+		height: 444px
+
+	&-wrap
+		display: flex
+		flex-direction: row
+
+	&__img-wrap
+		width: 48%
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		flex: 1 0 732px
+
+	&__main-bold
+		position: relative
+		z-index: 2
+		@include boldFont
+		line-height: 70px
+
+	&__main-regular
+		@include regularFont
+
+	&__darts-img
+		position: absolute
+		right: 0
+		margin-top: -200px
+
+	&__orange-line
+		position: absolute
+		z-index: 0
+		padding-top: 35px
+		padding-left: 220px
+
+	&__text-wrap
+		width: 48%
+		padding-top: 64px
+		display: flex
+		flex-direction: column
+		gap: 73px
+
+	&__item
+		display: flex
+		gap: 50px
+
+		&-blue-arrow
+			left: 870px
+			top: 3180px
+			position: absolute
+			height: 124px
+			width: 89px
+
+		&-orange-arrow
+			position: absolute
+			height: 124px
+			width: 89px
+			top: 3440px
+			left: 284px
+
+		&-text
+			display: flex
+			flex-direction: column
+
+			&__bold
+				font-family: $poppins-font
+				font-weight: 600
+				font-size: 1.75em
+				line-height: 52px
+				color: $regular-text
+
+			&__regular
+				@include regularFont
+
+// ----------------------------------- //
+			// Pricing
+//------------------------------------ //
+
+input[type="checkbox"]
+	position: relative
+	width: 84px
+	height: 40px
+	-webkit-appearance: none
+	background: rgba(255, 85, 62, 0.2)
+	outline: none
+	box-shadow: inset 0 0 5px rgba(253, 76, 53, 0.2)
+	border-radius: 20px
+	transition: .5s
+
+	&::before
+		content: ""
+		position: absolute
+		width: 28px
+		height: 28px
+		border-radius: 50%
+		top: 6px
+		left: 6px
+		background: $orange-text-button
+		transition: .5s
+
+input:checked[type="checkbox"]
+	background: rgba(255, 85, 62, 0.2)
+
+	&::before
+		left: 50px
+		transition: .5s
+
+.pricing
+	margin-top: 140px
+	margin-bottom: 140px
+
+	&__text
+		display: flex
+		flex-direction: column
+		text-align: center
+
+	&__orange-line
+		position: absolute
+		z-index: 1
+		padding-left: 160px
+		padding-top: 25px
+
+	&__bold
+		position: relative
+		@include boldFont
+		z-index: 2
+
+	&__regular
+		@include regularFont
+		padding-top: 20px
+
+	&__switcher
+		display: flex
+		flex-direction: row
+		justify-content: center
+		padding-top: 48px
+		gap: 20px
+
+		& span
+			padding-top: 15px
+			font-family: $poppins-font
+			font-size: $--fs-24
+			color: $regular-text
+			font-weight: 500
+
+	&__card-wrap
+		padding-top: 70px
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		gap: 30px
+		position: relative
+
+	&__card-item1
+		position: relative
+		z-index: 2
+		display: flex
+		text-align: center
+		flex-direction: column
+		border: 1px solid $orange-text-button
+		border-radius: 110px
+		padding: 48px 115px
+
+	&__card-item2
+		position: relative
+		z-index: 2
+		display: flex
+		text-align: center
+		flex-direction: column
+		background: $orange-text-button
+		border-radius: 110px
+		padding: 48px 115px
+		color: #fff
+		font-family: $inter-font
+
+	&__sand-clock
+		position: absolute
+		z-index: 1
+		right: 40px
+		top: 0
+
+	&__hand
+		z-index: 1
+		position: absolute
+		left: 0
+		padding-top: 320px
+
+.item1
+	&__card-bold
+		padding-top: 16px
+		font-size: $--fs-48
+		color: $bold-text
+		font-family: $inter-font
+		font-weight: 600
+
+	&__card-regular
+		padding-top: 56px
+		display: flex
+		flex-direction: column
+		gap: 20px
+		font-family: $inter-font
+		color: $orange-text-button
+		font-size: 1.75rem
+		font-weight: 600
+		line-height: 56px
+
+	&__card-third-block
+		padding-top: 64px
+		display: flex
+		justify-content: center
+		gap: 4px
+
+	&__dollar
+		@include regularFont
+		font-size: $--fs-18
+
+	&__zero
+		font-size: $--fs-64
+		font-weight: 700
+		line-height: $--fs-64
+		color: $regular-text
+		font-family: $inter-font
+
+	&__forever
+		@include regularFont
+		font-size: $--fs-18
+		padding-top: 20px
+
+	&__button
+		color: #fff
+		background: $orange-text-button
+		border-radius: 40px
+		padding: 24px 40px
+		font-family: $poppins-font
+		font-weight: 500
+
+	&__button-wrap
+		display: flex
+		justify-content: center
+		padding-top: 70px
+
+.item2
+	&__card-bold
+		padding-top: 16px
+		font-size: $--fs-48
+		font-weight: 600
+
+	&__card-regular
+		padding-top: 56px
+		display: flex
+		justify-content: center
+		flex-direction: column
+		gap: 20px
+		font-weight: 600
+		font-size: 1.75rem
+		line-height: 52px
+
+	&__card-third-block
+		padding-top: 64px
+		display: flex
+		justify-content: center
+		gap: 4px
+
+	&__dollar
+		@include regularFont
+		color: white
+		font-size: $--fs-18
+
+	&__thirty
+		font-size: $--fs-64
+		font-weight: 700
+		line-height: $--fs-64
+		color: white
+		font-family: $inter-font
+
+	&__forever
+		@include regularFont
+		color: white
+		font-size: $--fs-18
+		padding-top: 20px
+
+	&__button
+		color: $orange-text-button
+		background: #fff
+		border-radius: 40px
+		padding: 24px 40px
+		font-family: $poppins-font
+		font-weight: 500
+
+	&__button-wrap
+		display: flex
+		justify-content: center
+		padding-top: 70px
+
+._left
+	padding-left: 110px
+
+// ----------------------------------- //
+			// Partners
+//------------------------------------ //
+
+.partners
+	margin-top: 120px
+	margin-bottom: 80px
+
+	&-wrap
+		margin-left: 80px!important
+		margin-right: 474px!important
+		display: flex
+		gap: 100px
+
+	&__img-wrap
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		width: 48%
+		flex: 1 0 800px
+		gap: 56px
+
+		&__left
+			display: flex
+			flex-direction: column
+			gap: 54px
+			justify-content: center
+			align-items: flex-end
+
+		&__right
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: flex-start
+			gap: 59px
+
+	&__text
+		position: relative
+		flex: 1 0 470px
+
+		&__orange-line
+			position: absolute
+			z-index: -1
+			padding-left: 157px
+			padding-top: 35px
+
+		&__bold
+			@include boldFont
+			line-height: 70px
+
+		&__regular
+			padding-top: 24px
+			@include regularFont
+			line-height: 36px
+
+	&__button
+		color: $orange-text-button
+		border: 1px solid $orange-text-button
+		border-radius: 40px
+		font-family: $poppins-font
+		padding: 24px 40px
+		font-weight: 500
+
+		&-wrap
+			padding-top: 48px
+
+// ----------------------------------- //
+			// Clients
+//------------------------------------ //
+
+.clients
+	margin-top: 170px
+	margin-bottom: 120px
+
+	&-wrap
+		display: flex
+		flex-direction: row
+		justify-content: center
+		gap: 48px
+		padding-top: 60px
+
+	&__main-text
+		text-align: center
+		display: flex
+		flex-direction: column
+
+		&__bold
+			position: relative
+			&-text
+				@include boldFont
+				line-height: 70px
+
+			&__orange-line
+				position: absolute
+				z-index: -1
+				top: 35px
+				margin-left: -25px
+
+		&__regular
+			padding-top: 20px
+			@include regularFont
+			line-height: 36px
+
+	&__left
+		width: 20%
+		display: flex
+		justify-content: flex-end
+
+	&__right
+		width: 52%
+		padding-left: 20px
+		justify-content: center
+		display: flex
+		flex-direction: column
+		gap: 16px
+
+		&__regular
+			@include regularFont
+			font-size: $--fs-20
+
+		&__name
+			padding-top: 20px
+			font-family: $inter-font
+			font-size: $--fs-24
+			color: #38363c
+			font-weight: 500
+
+		&__job
+			@include regularFont
+			line-height: 26px
+
+		&__points
+			display: flex
+			padding-top: 12px
+			flex-direction: row
+			gap: 10px
+			justify-content: flex-start
+
+			&__long-point
+				width: 36px
+				height: 12px
+				background: $orange-text-button
+				border-radius: 7px
+
+			&__point
+				width: 12px
+				height: 12px
+				background: #fcefe2
+				border-radius: 7px
+
+// ----------------------------------- //
+			// Application
+//------------------------------------ //
+
+.application
+	position: relative
+	background-color: #fff8f2
+
+	&-wrap
+		padding-top: 100px
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+
+	&__right
+		width: 50%
+		padding-left: 115px
+
+	&__left
+		padding-left: 100px
+		width: 48%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: start
+
+		&__bold
+
+			&-text
+				position: relative
+				z-index: 2
+				@include boldFont
+				line-height: 70px
+
+			&__orange-line
+				position: absolute
+				z-index: 1
+				margin-top: -30px
+				padding-left: 240px
+
+		&__regular
+			@include regularFont
+			padding-top: 24px
+			line-height: 36px
+
+		&__buttons
+			display: flex
+			padding-top: 48px
+			gap: 20px
+
+			&__apple, &__google
+				width: 179px
+				height: 73px
+
+// ----------------------------------- //
+			// Footer
+//------------------------------------ //
+
+.footer
+	margin-top: 110px
+	margin-bottom: 40px
+	&__top-block
+		display: flex
+		justify-content: space-between
+
+		&__list
+			display: flex
+			flex-direction: row
+			gap: 48px
+
+			&__item
+				font-family: $poppins-font
+				font-size: $--fs-18
+				font-weight: 400
+				line-height: 24px
+
+		&__icons
+			display: flex
+			gap: 44px
+
+	&__line
+		width: 100%
+		height: 1px
+		background: #404040
+		opacity: 0.2
+
+		&-wrap
+			padding-top: 60px
+
+	&__low-block
+		padding-top: 40px
+		display: flex
+		justify-content: space-between
+		@include regularFont
+
+		&__terms-policy
+			display: flex
+			flex-direction: row
+			gap: 100px
+
+// ----------------------------------- //
+			// Container
+//------------------------------------ //
+
+.container
+	width: 100%
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+
+@media (min-width: 576px)
+	.container
+		max-width: 540px
+
+@media (min-width: 768px)
+	.container
+		max-width: 720px
+
+@media (min-width: 992px)
+	.container
+		max-width: 960px
+
+	.header
+		display: block
+
+	.upper-block
+		&__phone1
+			display: inline-block
+
+		&__phone2
+			display: inline-block
+
+		&__clock
+			display: inline-block
+
+		&__vector
+			display: inline-block
+
+@media (min-width: 1200px)
+	.container
+		max-width: 1140px
+
+@media (min-width: 1440px)
+	.container
+		max-width: 1326px

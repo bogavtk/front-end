@@ -1,0 +1,33 @@
+npm init 
+parcel - get started - build a web...
+npm i --save-dev parcel - сборщик js и sass
+node_modules - все библиотеки
+"source": "src/index.html", - создаем строчку в packaje.json
+
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+
+  затем запуск сервака 
+  npm run start
+
+  div*3
+  img[src="./assets/logo.png"]
+  nav.header__nav>(a.header__nav__link*3)
+  nav.header__nav+(a.header__nav__link*3) - на одном уровне
+  EMMET - назвние 
+
+  reset.sass
+caniuse.com 
+
+  sass:
+  .editorconfig - табы
+  везде сначала tab
+
+  /* наследование */
+  		&__link
+			&:not(:last-child)
+				margin-right: 48px
+
+Введение в SASS 
